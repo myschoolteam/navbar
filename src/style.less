@@ -1,0 +1,150 @@
+body{
+	background-image: url('/dist/bg-1.jpg');
+	width:100%;
+}
+ul {
+	background: transparent;
+	color: white;
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	display: block;
+	li {
+		display: inline-block;
+		line-height: 21px;
+		position: relative;
+		text-align: left;
+		a {
+			color: #ffffff;
+			display: block;
+			padding: 8px 25px;
+			text-decoration: none;
+			font-size:2vw;
+			&:hover {
+				transition-delay: 2s;
+				background: tarnsparent;
+				color: black;
+			}
+		}
+		ul.dropdown {
+			background: white;
+			display: none;
+			left: 20%;
+			right: 5%;
+			position: absolute;
+			z-index: 999;
+			li {
+				display: block;
+			}
+		}
+		&:hover {
+			transition-delay: 2s;
+			ul.dropdown {
+				transition-delay: 2s;
+				border: 1px solid;
+				padding: 30px;
+				box-shadow: 2px 2px #666666;
+				display: block;
+				border-radius: 10px;				
+				margin-top:1px;
+				height: auto;
+				width: 350px;
+			}
+		}
+	}
+}
+.traingle {
+	&:after {
+		border-bottom: solid 9px white;
+		border-left: solid 9px transparent;
+		border-right: solid 9px transparent;
+		bottom: 100%;
+		content:'';
+		height: 0;
+		left: 20%;
+		margin-left: -50px;
+		position: absolute;
+		width: 0;
+	}
+}
+.title {
+	color: #6772e5;
+	font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	&:hover {
+		color: black !important;
+	}
+}
+.subtitle{
+	color: black;
+}
+.icontitle {
+	margin-right: 10px;
+}
+
+/* For mobile phones: */
+@media screen and (max-width:800px) {	
+	ul {
+		background: transparent;
+		color: white;
+		list-style: none;
+		padding: 0;
+		text-align: center;
+		display: block;
+		li {
+			line-height: 21px;
+			position: relative;
+			text-align: left;
+			width: 100%;
+			a {
+				color: white;
+				display: block;
+				padding: 30px 25px;
+				text-decoration: none;
+				font-size:6vw;
+				margin-left: 20%;
+				&:hover {
+					background: tarnsparent;
+					color: black;
+				}
+			}
+			ul.dropdown {
+				background: white;
+				display: none;
+				left: 20%;
+				position: absolute;
+				z-index: 999;
+				li {
+					display: block;
+				}
+			}
+			&:hover {
+				ul.dropdown {
+					border: 1px solid;
+					padding: 30px;
+					box-shadow: 2px 2px #666666;
+					display: block;
+					border-radius: 10px;
+					margin-top:1px;
+					height:auto;					
+					width: auto;
+				}
+			}
+		}
+	}
+	.traingle {
+		&:after {
+			border-bottom: solid 9px white;
+			border-left: solid 9px transparent;
+			border-right: solid 9px transparent;
+			bottom: 100%;
+			content:'';
+			height: 0;
+			left: 25%;
+			margin-left: -54px;
+			position: absolute;
+			width: 0;
+		}
+	}
+}
